@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+</head>
+<body>
+    <a href="/" class="logo">
+        <img src="images/CS logo 2.0.png" alt="CS Logo">
+    </a>
+
+    <section class="hero" style="background-image: url('images/LunarDashRenderCropped.png'), url(images/Galaxy3.1.png)">
+        <div class="intro">
+            <h1><span class = "neon" id="name-title">My Projects</span></h1>
+            <p>Here you can find all the high quality projects I've ever made</p>
+            <p>I've got plenty of games, websites, bots and AIs you'll definitely like so go on, check them out</p>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <div class="accordion-item" id="FBSection">
+            <button class="accordion-header">
+                <img src="images/FallingBlocksIcon.png" alt="Falling Blocks Icon" class="project-icon">
+                <span>Falling Blocks</span>
+            </button>
+            <div class="accordion-content">
+                <h2>My first real game, rough code, janky graphics, but surprisingly fun to play.</h2>
+                <p>This is the first real game I ever made, everything before it was just broken prototypes used to figure out how coding even works. Built in GameMaker using GML, it’s a simple arcade-style project where the player moves around the screen, dodging enemy blocks and trying to survive as long as possible.</p>
+                <p>The controls are simple: use WASD to move around and Ctrl to speed up. But the fun comes from the obstacles. They appear in waves, starting with basic blocks that fall straight down, then ramp up with enemies that have custom movement patterns, unique shapes, and chaotic behavior.</p>
+                <p>There are also a couple of leftover debug controls: press Space to skip to the next level section, and use the mouse scroll wheel to change the player's size. I originally added these for testing, and planned to remove them, but never got around to it.</p>
+                <p>The game has no menus (it used to, but some files got corrupted along the way), and everything happens in a single scene.</p>
+                <p>All the textures were made in Paint 3D, a 3D modeling tool that I somehow used as a 2D art program. The result? Visuals that are as simple (and ugly) as they come.</p>
+                <p>I made this project roughly 5–6 years ago, and it took me about a month to finish. Even with all its flaws, I look back on it as my first complete game, and honestly, I still find the gameplay kind of addicting.</p>
+
+                <div class="project-columns">    
+                    <div class="project-text">
+                        <p>You can check out both the build and the original source files in these two links:</p>
+                        <p><a href="downloads/Falling Blocks Build.zip" download class="neon">Build</a></p>
+                        <p><a href="downloads/Falling Blocks Source.zip" download class="neon">Source Code</a></p>
+                    </div>
+                    <a data-fancybox="FB" href="images/Screenshots/ScreenshotFB.jpg">
+                        <img src="images/Screenshots/ScreenshotFB.jpg" alt="Falling Blocks Icon" class="screenshot-left">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" id="LDSection">
+            <button class="accordion-header">
+                <img src="images/LDIcon.png" alt="Lunar Dash icon" class="project-icon">
+                <span>Lunar Dash</span>
+            </button>
+            <div class="accordion-content">
+                <div>
+                    <h2>A fast-paced, space-themed, arcade-style 2D runner.</h2>
+                    <p>Lunar Dash is my first official game project. It's a fast-paced, space-themed 2D runner that I began working on in 2021 and after about a year of development, I released it on the Google Play Store.</p>
+                    <p>Inspired by the simplicity and addictiveness of Flappy Bird, the game let's you take control of an astronaut dashing across the moon with the goal of surviving as long as possible while dodging deadly obstacles and collecting coins. You have two core abilities: a variable-height jump and a mid-air dash, both designed to give players tight control over movement and timing.</p>
+                    <p>The initial release (v1.0) featured a single infinite game mode and just one type of obstacle. But development didn’t stop there.</p>
+                    <a data-fancybox="LD1" href="images/Screenshots/ScreenshotLD 1.jpg">
+                        <img src="images/Screenshots/ScreenshotLD 1.jpg" alt="Lunar Dash screenshot" class="screenshot-right">
+                    </a>
+                    <p>In the upcoming v2.1.1 update (currently unreleased on the Play Store), I added a range of new features:</p>
+                    <p>· New obstacles: acid puddles, alternate pipe shapes, and other hazards.</p>
+                    <p>· Daily Level Mode: a handcrafted level that changes every 24 hours, offering a fresh challenge to players each day.</p>
+                    <p>· Glide mechanic: by holding the screen while airborne, players can now slow their fall and gain better control mid-jump.</p>
+                    <p>To top it off, the game includes a public leaderboard where players can submit their high scores from the infinite level and compete for the top spot. The leaderboard was built using a third-party online tool, integrated into the game to support real-time updates.</p>
+                    <div class="project-columns">
+                        <a data-fancybox="LD2" href="images/Screenshots/ScreenshotLD 2.jpg">
+                            <img src="images/Screenshots/ScreenshotLD 2.jpg" alt="Lunar Dash Screenshot" class="screenshot-left">
+                        </a>
+                        
+                        <div class="project-text">
+                            <h3>Daily Levels</h3>
+                            <p>Daily mode features 8 handcrafted levels, each with unique obstacles and designs. You'll find levels with huge acid puddles, bouncy mushrooms, horizontal pipes, and more.</p>
+                            <p>Behind the scenes, a custom system assigns players one random level each day, the same for every instance, without needing any internet connection.</p>
+                            <p>You get 3 lives to beat the level, shown in the top-left corner of the screen. Finish it successfully, and you'll earn 100 coins, which can be used for small advantages in infinite mode.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="project-columns">
+                        <div class="project-text">
+                            <h2>The menus:</h2>
+                            <p>In the development of Lunar Dash, I dove deep into UI/UX design to create smooth and intuitive user interfaces.</p>
+                            <p>The game features six unique menus: the main menu, leaderboard, settings, pause, lose, and win screens.</p>
+                            <p>Each one was carefully designed to be functional, responsive, and visually consistent with the overall game style. Through this process, I learned how to balance usability with aesthetics, ensuring the menus support the gameplay without getting in the way.</p>
+                        </div>
+                        
+                        <div class="slideshow-container">
+                            <div class="slide active">
+                                <a data-fancybox="LDSlide" href="images/Screenshots/ScreenshotLD 3.jpg">
+                                    <img src="images/Screenshots/ScreenshotLD 3.jpg" alt="Menu Screenshot 1" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="LDSlide" href="images/Screenshots/ScreenshotLD 4.jpg">
+                                    <img src="images/Screenshots/ScreenshotLD 4.jpg" alt="Menu Screenshot 2" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="LDSlide" href="images/Screenshots/ScreenshotLD 5.jpg">
+                                    <img src="images/Screenshots/ScreenshotLD 5.jpg" alt="Menu Screenshot 3" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="LDSlide" href="images/Screenshots/ScreenshotLD 6.jpg">
+                                    <img src="images/Screenshots/ScreenshotLD 6.jpg" alt="Menu Screenshot 4" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="LDSlide" href="images/Screenshots/ScreenshotLD 7.jpg">
+                                    <img src="images/Screenshots/ScreenshotLD 7.jpg" alt="Menu Screenshot 5" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="LDSlide" href="images/Screenshots/ScreenshotLD 8.jpg">
+                                    <img src="images/Screenshots/ScreenshotLD 8.jpg" alt="Menu Screenshot 6" />
+                                </a>
+                            </div>
+
+                            <button class="prev">❮</button>
+                            <button class="next">❯</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="LDEnd">
+                        <div class="project-columns">
+                            <div class="project-image">
+                                <a data-fancybox="LDCode" href="images/Screenshots/ScreenshotLD 10.png">
+                                    <img src="images/Screenshots/ScreenshotLD 10.png" alt="Player Movement Code" class="small-code-image"/>
+                                </a>
+                                <a data-fancybox="LDCode" href="images/Screenshots/ScreenshotLD 9.png">
+                                    <img src="images/Screenshots/ScreenshotLD 9.png" alt="Player Movement Code" class="small-code-image"/>
+                                </a>
+                            </div>
+
+                            <div class="project-text-big">
+                                <h2>Behind the scenes:</h2>
+                                <p>Lunar Dash isn't just about fast gameplay and flashy colors, it's backed by custom systems and handcrafted logic to create a smooth and replayable experience.</p>
+                                <p>In this section, I’ll showcase some of the actual code used in the game, along with thoughts on the logic we developers used to shape the gameplay experience. From movement mechanics to daily level generation, these scripts reflect both functionality and design intent — not just how the game works, but why it was built that way.</p>
+                                <p>I developed Lunar Dash alongside two other teammates, taking on the role of project manager, lead programmer, and game designer.</p>
+                                <h2>Movement Code Snippet</h2>
+                                <p>This code snippet comes from the astronaut's movement script. It showcases how I implemented a variable jump height mechanic, designed to make both small and large jumps feel smooth and responsive, ensuring tight controls that match the game's fast-paced style.</p>
+                                <p>I created this script with two main goals in mind: smooth responsiveness and cross-platform compatibility.</p>
+                                <p>To make jumping feel natural and fluid, I didn’t just tweak the player’s Y velocity, instead, I controlled the gravity scale, allowing for both high and low jumps to feel smooth and intentional.</p>
+                                <p>The second goal was making this system work seamlessly across all platforms. I built the input system to handle both button-based input (used by keyboard and controllers) and touch input (used on mobile devices, including Android and iOS). That way, the same logic could power the movement regardless of the device.</p>
+                                <h2>Daily Level Manager Script</h2>
+                                <p>This script handles the daily level system in the game. Its purpose is to pick a new level every 24 hours, giving players something fresh to play each day.</p>
+                                <p>It works by creating a list of levels, each assigned an index starting from 0. Then, it generates a seemingly random number by multiplying the current day and month. That number is then reduced (by subtracting the total number of available levels repeatedly) until it fits within the valid range of indexes. Finally, the level corresponding to that index is instantiated and used as the daily level.</p>
+                                <p>This approach guarantees that all players in the same time zone receive the same level, enabling synchronized challenges and allowing friends to compete fairly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" id="DFFSection">
+            <button class="accordion-header">
+                <img src="images/DFFIcon.png" alt="Donut Fusion Frenzy Icon" class="project-icon">
+                <span>Donut Fusion Frenzy</span>
+            </button>
+            <div class="accordion-content">
+                <h1>A relaxing, Suika Game inspired, puzzle game</h1>
+                <p>Donut Fusion Frenzy is a casual, puzzle game inspired by the viral hit Suika Game. It combines colorful 2D cartoon visuals with a deceptively simple gameplay loop: throw and merge donuts of the same size to create bigger ones and gain points.</p>
+                <p>The challenge lies in managing a limited space, once the stack of donuts overflows the play area, it’s game over. There are eight unique donut sizes, with the largest one not only giving the most points but also disappearing upon merging, allowing players to keep going and chase high scores endlessly.</p>
+                <p>While the physics-driven gameplay may seem chaotic or unintuitive at first, especially due to the donuts’ bouncy behavior, experienced players can learn to anticipate movement patterns and even use the unpredictable bounciness to their advantage.</p>
+                
+                <div class="project-columns">
+                    <div class="project-text">
+                        <h2>The Levels:</h2>
+                        <p>The game features 14 levels: 10 standard ones unlocked through regular progression, one arena where players can compete for the first place, and 3 special levels unlocked by completing a difficult challenge. Each of the 10 normal levels has its own unique look, theme, post-processing effects, shaders, and mechanics.</p>
+                        <p>The first level acts as a gentle introduction, while each subsequent level adds new twists. For example:</p>
+                        <p>- Level 3 hides the list of upcoming donuts</p>
+                        <p>- Level 5 adds cactus obstacles that donuts can stick to</p>
+                        <p>- Level 9 introduces lightning and cloud donuts, where lightning clears space and clouds block your vision.</p>
+                        <p>The Arena is similar to any other level, but it allows players to publish on the game's leaderboard their high score once they finish playing.</p>
+                        <p>The 3 special levels take things even further:</p>
+                        <p>- The Space Level is octagon-shaped instead of square and has gravity that shifts direction based on which wall you shoot toward. It even lets players explore outside the map, where they might find references to games like Hollow Knight.</p>
+                        <p>- Time Frenzy gives players a ticking timer that can be slowed by merging donuts, adding pressure and urgency to the gameplay.</p>
+                        <p>- Simulation Mode allows players to tweak the experience before playing—adjusting donut size, gravity strength, or the layout of the level itself.</p>
+                        <p>These special levels unlock once the player achieves a high score of 12,000 on every normal level, which usually takes around 2 hours of gameplay.</p>
+                    </div>
+                    <div class="second-column">
+                        <div class="slideshow-container">
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF1.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF1.jpg" alt="DFF Levels screenshot 1" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF2.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF2.jpg" alt="DFF Levels screenshot 2" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF3.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF3.jpg" alt="DFF Levels screenshot 3" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF4.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF4.jpg" alt="DFF Levels screenshot 4" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF5.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF5.jpg" alt="DFF Levels screenshot 5" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF6.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF6.jpg" alt="DFF Levels screenshot 6" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF7.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF7.jpg" alt="DFF Levels screenshot 7" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF8.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF8.jpg" alt="DFF Levels screenshot 8" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF9.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF9.jpg" alt="DFF Levels screenshot 9" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF10.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF10.jpg" alt="DFF Levels screenshot 10" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF11.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF11.jpg" alt="DFF Levels screenshot 11" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF12.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF12.jpg" alt="DFF Levels screenshot 12" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF13.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF13.jpg" alt="DFF Levels screenshot 13" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF14.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF14.jpg" alt="DFF Levels screenshot 14" />
+                                </a>
+                            </div>
+
+                            <button class="prev">❮</button>
+                            <button class="next">❯</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-columns">
+                    <div class="second-column">
+                        <div class="slideshow-container">
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF15.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF15.jpg" alt="DFF Levels screenshot 15" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF16.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF16.jpg" alt="DFF Levels screenshot 16" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF17.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF17.jpg" alt="DFF Levels screenshot 17" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF18.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF18.jpg" alt="DFF Levels screenshot 18" />
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a data-fancybox="DFFSlide" href="images/Screenshots/ScreenshotDFF19.jpg">
+                                    <img src="images/Screenshots/ScreenshotDFF19.jpg" alt="DFF Levels screenshot 19" />
+                                </a>
+                            </div>
+
+                            <button class="prev">❮</button>
+                            <button class="next">❯</button>
+                        </div>
+                    </div>
+                    <div class="project-text">
+                        <h2>The Menus:</h2>
+                        <p>Compared to Lunar Dash, this game introduces a much more refined and expansive UI, packed with menus, elements, and transitions that enhance the player experience.</p>
+                        <p>From the main menu, players can access every section of the game:</p>
+                        <p>- On the bottom left, the Settings button opens a panel with categories like video, audio, language, profile, cheats, tutorial, credits, and more</p>
+                        <p>- On the bottom right, the Skins button opens a menu where players can unlock or purchase new appearances for their donuts.</p>
+                        <p>- Above the main button, you'll find four additional buttons for less frequently used features, such as the arena and the achievements</p>
+                        <p>- Below it, there's a mission scroll. When clicked, it shows a list of available missions along with the rewards for completing them.</p>
+                        <p>- Finally, the main “Play” button uses a smooth background transition to elegantly reveal all available levels, adding a nice polish to the overall experience.</p>
+                        <p></p>
+                        <h2>Marketing:</h2>
+                        <p>For this project, I integrated ads to help support ongoing development. I also promoted the game through various social media platforms to reach a wider audience.</p>
+                        <p>If you want to see the gameplay in action, check out the <a href="https://www.youtube.com/watch?v=Z2OIyCJa0rY" class="neon">trailer on YouTube</a> it gives a quick overview of what the game is all about.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item" id="CASection">
+            <button class="accordion-header">
+                <img src="images/CAClone.png" alt="Cellular Automata Clone Icon" class="project-icon">
+                <span>Cellular Automata Clone</span>
+            </button>
+            <div class="accordion-content">
+                <h2>A small-scale prototype inspired by Conway's Game of Life, but with an elemental twist.</h2>
+                <p>Unlike my other projects like Lunar Dash and Donut Fusion Frenzy, this one was smaller in scale and built primarily as a portfolio piece while also helping me learn more about 2D arrays and optimization.</p>
+                <p>It's a clone of the classic Cellular Automata concept, where cells on a grid evolve into fascinating patterns by following simple behavior rules, but with a twist. Instead of being simply 'dead' or 'alive', each cell represents an element or material (like fire, water, earth, or wind) each with its own behavior based on its surroundings.</p>
+                <div>
+                    <div class="screenshots-section">
+                        <div class="screenshot-column">
+                            <p>These four screenshots showcase different aspects of the game. While one image showcases the visuals of the game after minutes of gamplay, the other screenshots highlight other aspects on the backend side. For example cell behaviours, and grid generation.</p>
+                            <p>The game uses very simple visuals (many are Unity’s default textures) since the primary focus was on building optimized, modular systems.</p>
+                            <p>From the main menu, players can select the grid size. The in-game UI features two side panels with options like enabling auto-update, clearing the grid, and choosing which element to place. The goal was to create an intuitive sandbox environment that allows players to experiment freely.</p>
+                            <p>Each cell has logic based on its element, so fire will expand if it has grass adjacent to it, but will die if there's no grass in its surroundings, water will expand infitely extinguishing fire and making plants grow more efficiently, rocks are simple obstacles that block a cell's behavious ecc.</p>
+                            <p>Cells are created through scriptable objects, meaning that everything can be setup in Unity without modifying any code. Thanks to Unity's simple UI it's easy to create a cell from scratch, deciding it's behaviour, colour, and type without worrying about any scripts breaking.</p>
+                            <h2>Try it yourself</h2>
+                            <p>I decided to keep this section short since this project can be easily downloaded</p>
+                            <a href="https://yourgithubrepo.com" class="button github" target="_blank">Source code on GitHub</a>
+                            <a href="https://yourbuildlink.com" class="button build" download>Download Build</a>
+                        </div>
+                        
+                        <div class="screenshot-column">
+                            <a data-fancybox="CAImg" href="images/Screenshots/ScreenshotCA 3.jpg">
+                                <img src="images/Screenshots/ScreenshotCA 3.jpg" alt="Screenshot of the game scene after a few minutes of gameplay">
+                            </a>
+                            <a data-fancybox="CAImg" href="images/Screenshots/ScreenshotCA 1.png">
+                                <img src="images/Screenshots/ScreenshotCA 1.png" alt="Screenshot of a code snippet for the cell's behavior">
+                            </a>
+                            <a data-fancybox="CAImg" href="images/Screenshots/ScreenshotCA 4.png">
+                                <img src="images/Screenshots/ScreenshotCA 4.png" alt="Screenshot of a code snippet for grid generation">
+                            </a>
+                        </div>
+                        <div class="screenshot-column">
+                            <div class="disappear-on-phones">
+                                <a data-fancybox="CAImg" href="images/Screenshots/ScreenshotCA 2.jpg">
+                                    <img src="images/Screenshots/ScreenshotCA 2.jpg" alt="Screenshot of cell behaviour panel">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header">Space Fighter</button>
+            <div class="accordion-content">
+                <p>Coming soon...</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header">Python Automation Bot</button>
+            <div class="accordion-content">
+                <p>Coming soon...</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header">Portfolio Website</button>
+            <div class="accordion-content">
+                <p>Coming soon...</p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header">Random 3D models</button>
+            <div class="accordion-content">
+                <p>Coming soon...</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const title = document.getElementById("name-title");
+        const originalText = title.textContent;
+        const characters = "!<>-_\\/[]{}—=+*^?#";
+
+        function scrambleTextRandom(element, text, duration = 2000) {
+        let frame = 0;
+        const totalFrames = Math.floor(duration / 30);
+        // Track which letters are fixed
+        let fixedIndices = new Set();
+
+        const interval = setInterval(() => {
+            let output = '';
+
+            // Number of letters to fix this frame (roughly proportional to progress)
+            const lettersToFix = Math.floor((frame / totalFrames) * text.length);
+
+            // Randomly pick letters to fix
+            while (fixedIndices.size < lettersToFix) {
+            fixedIndices.add(Math.floor(Math.random() * text.length));
+            }
+
+            for (let i = 0; i < text.length; i++) {
+            if (fixedIndices.has(i)) {
+                output += text[i];
+            } else {
+                output += characters[Math.floor(Math.random() * characters.length)];
+            }
+            }
+
+            element.textContent = output;
+            frame++;
+
+            if (frame >= totalFrames) {
+            clearInterval(interval);
+            element.textContent = text; // final text
+            fixedIndices.clear();
+            }
+        }, 20);
+        }
+
+        title.addEventListener("click", () => {
+        scrambleTextRandom(title, originalText, 1200);
+        });
+    </script>
+
+    <script>
+        const headers = document.querySelectorAll('.accordion-header');
+
+        headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const isActive = item.classList.contains('active');
+
+            // Close all accordions
+            document.querySelectorAll('.accordion-item').forEach(i => {
+            i.classList.remove('active');
+            const c = i.querySelector('.accordion-content');
+            c.style.maxHeight = null;
+            c.style.paddingTop = '0';
+            c.style.paddingBottom = '0';
+            });
+
+            // Open clicked one if it wasn't already open
+            if (!isActive) {
+                item.classList.add('active');
+
+                const paddingTop = 16;    // px
+                const paddingBottom = 16; // px
+
+                content.style.paddingTop = paddingTop + 'px';
+                content.style.paddingBottom = paddingBottom + 'px';
+
+                // Add padding to scrollHeight so maxHeight includes padding space
+                content.style.maxHeight = (content.scrollHeight + paddingTop + paddingBottom) + 'px';
+            }
+        });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll(".slideshow-container").forEach(initSlideshow);
+
+        function initSlideshow(container) {
+            let currentSlide = 0;
+            const slides = container.querySelectorAll(".slide");
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove("active");
+                    if (i === index) slide.classList.add("active");
+                });
+            }
+
+            function changeSlide(direction) {
+                currentSlide += direction;
+                if (currentSlide < 0) currentSlide = slides.length - 1;
+                if (currentSlide >= slides.length) currentSlide = 0;
+                showSlide(currentSlide);
+            }
+
+            // Hook up buttons *inside* this container only
+            container.querySelector(".prev")?.addEventListener("click", () => changeSlide(-1));
+            container.querySelector(".next")?.addEventListener("click", () => changeSlide(1));
+
+            showSlide(currentSlide);
+        }
+    </script>
+</body>

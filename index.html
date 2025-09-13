@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a id="top"></a>
+
+    <a href="#top" class="logo">
+        <img src="images/CS logo 2.0.png" alt="CS Logo">
+    </a>
+
+    <section class="hero" style="background-image: url('images/LunarDashRenderCropped.png'), url(images/Galaxy5.1.png)">
+        <div class="intro">
+            <h1>Hi I'm <span class = "neon" id="name-title">Costantino Sarnataro</span></h1>
+            <p>Game Developer • Programmer • Game Tester</p>
+        </div>
+        
+        <div class="explore">
+            <h2>Explore My Portfolio</h2>
+            <p><a href="#about-me" class = "neon" title="About Me">About Me</a></p>
+            <p><a href="#my-skills" class = "neon" title="My Skills">My Skills</a></p>
+            <p><a href="#my-projects" class = "neon" title="My Projects">My Projects</a></p>
+            <p><a href="#work-in-progress" class = "neon" title="Work In Progress">Work In Progress</a></p>
+            <p><a href="#contactme" class = "neon" title="Contact Me">Contact Me</a></p>
+        </div>
+    </section>
+
+    <section id="categories" class="categories">
+        <a href="about.html" class="category-link">
+            <div class="category" id="about-me" style="background-image: url('images/GradientSquare.png'), url('images/AboutMeImage.png');">
+                <div class="category-text">
+                    <h2>About Me</h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="skills.html" class="category-link">
+            <div class="category" id="my-skills" style="background-image: url('images/GradientSquare.png'), url('images/SkillsImage.png');">
+                <div class="category-text">
+                    <h2>My Skills</h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="projects.html" class="category-link">
+            <div class="category" id="my-projects" style="background-image: url('images/GradientSquare.png'), url('images/ProjectsImage.png');">
+                <div class="category-text">
+                    <h2>My Projects</h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="wip.html" class="category-link">
+            <div class="category" id="work-in-progress" style="background-image: url('images/GradientSquare.png'), url('images/WorkInProgressImage.png');">
+                <div class="category-text">
+                    <h2>Work In</h2>
+                    <h2>Progress</h2>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <section id="contactme" class="contactme">
+        <div id="contact" class="contact-section">
+            <h2>If you liked my portfolio and would like to <span class = "neon">reach out</span> just message me through this contact form or on Discord to the nickname "Costiklev"</h2>
+            <form action="https://formspree.io/f/mqalpedy" method="POST" class="contact-form">
+                <label>
+                Your Name:
+                <input type="text" name="name" required>
+                </label>
+                <label>
+                Your Email:
+                <input type="email" name="_replyto" required>
+                </label>
+                <label>
+                Your Message:
+                <textarea name="message" rows="5" required></textarea>
+                </label>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const title = document.getElementById("name-title");
+        const originalText = title.textContent;
+        const characters = "!<>-_\\/[]{}—=+*^?#";
+
+        function scrambleTextRandom(element, text, duration = 2000) {
+        let frame = 0;
+        const totalFrames = Math.floor(duration / 30);
+        // Track which letters are fixed
+        let fixedIndices = new Set();
+
+        const interval = setInterval(() => {
+            let output = '';
+
+            // Number of letters to fix this frame (roughly proportional to progress)
+            const lettersToFix = Math.floor((frame / totalFrames) * text.length);
+
+            // Randomly pick letters to fix
+            while (fixedIndices.size < lettersToFix) {
+            fixedIndices.add(Math.floor(Math.random() * text.length));
+            }
+
+            for (let i = 0; i < text.length; i++) {
+            if (fixedIndices.has(i)) {
+                output += text[i];
+            } else {
+                output += characters[Math.floor(Math.random() * characters.length)];
+            }
+            }
+
+            element.textContent = output;
+            frame++;
+
+            if (frame >= totalFrames) {
+            clearInterval(interval);
+            element.textContent = text; // final text
+            fixedIndices.clear();
+            }
+        }, 20);
+        }
+
+        title.addEventListener("click", () => {
+        scrambleTextRandom(title, originalText, 1200);
+        });
+    </script>
+</body>
+</html>
